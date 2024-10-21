@@ -1,0 +1,138 @@
+/* General body styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: hsl(319, 34%, 16%);
+    color: #ECF0F1;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#stopwatch-container {
+    text-align: center;
+    font-size: calc(18px + 0.5vw); /* Responsive font size */
+}
+
+#stopwatch-frame {
+    width: 80vw; /* Use viewport width for responsiveness */
+    max-width: 300px;
+    height: 80vw;
+    max-height: 300px;
+    border-radius: 10%;
+    background-color: hsl(322, 14%, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+#controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 0.8em;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: hsl(320, 5%, 46%);
+    color: #ECF0F1;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+button:hover {
+    background-color: #86949f;
+}
+
+/* Lap container */
+#lap-container {
+    background-color: hsl(323, 9%, 40%);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 90vw;
+    width: 100%;
+}
+
+#lap-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#lap-counter {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+#lap-time {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #0b0e0c; /* Green for lap time */
+}
+
+#lap-list li {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+#lap-list li:nth-child(even) {
+    background-color: #d1d1d1;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    #stopwatch-frame {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    button {
+        width: 80px;
+        padding: 8px 16px;
+    }
+
+    #lap-container {
+        padding: 15px;
+    }
+
+    #lap-list li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #stopwatch-frame {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    button {
+        width: 70px;
+        padding: 6px 12px;
+        font-size: 0.7em;
+    }
+
+    #lap-container {
+        padding: 10px;
+    }
+
+    #lap-list li {
+        font-size: 12px;
+    }
+}
